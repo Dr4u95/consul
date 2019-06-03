@@ -240,4 +240,9 @@ namespace :admin do
     resources :actions, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :administrator_tasks, only: [:index, :edit, :update]
   end
+
+  resources :local_census_records
+  namespace :local_census_records do
+    resources :imports, only: [:new, :create, :show]
+  end
 end
