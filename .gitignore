@@ -39,5 +39,5 @@ public/sitemap.xml
 public/system/
 /public/ckeditor_assets/
 
-config/environments/production.rb
+shared/*
 pids/*.pid

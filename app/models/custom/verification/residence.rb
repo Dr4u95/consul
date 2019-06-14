@@ -1,4 +1,3 @@
-
 require_dependency Rails.root.join("app", "models", "verification", "residence").to_s
 
 class Verification::Residence
@@ -7,8 +6,9 @@ class Verification::Residence
   validate :residence_in_madrid
 
   def postal_code_in_madrid
-    errors.add(:postal_code, I18n.t("verification.residence.new.error_not_allowed_postal_code")) unless valid_postal_code?
-  end
+    errors.add(:postal_code, I18n.t('verification.residence.new.error_not_allowed_postal_code')) unless valid_postal_code?
+end
+
 
   def residence_in_madrid
     return if errors.any?
@@ -23,7 +23,8 @@ class Verification::Residence
   private
 
     def valid_postal_code?
-      postal_code =~ /^11370/
+      postal_code =~ /^11360/   
     end
 
 end
+
